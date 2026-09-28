@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teleprompter - TOC</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0b1020;
+    color: #f5f7fb;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+  }
+  #topbar {
+    height: 74px;
+    background: #111936;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    border-bottom: 1px solid #28345f;
+  }
+  #title { font-size: 20px; font-weight: 700; }
+  #status { color: #aeb9d9; font-size: 14px; }
+  .controls { display: flex; gap: 8px; }
+  button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 15px;
+    background: #2d6cdf;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  button.secondary { background: #263052; }
+  button:hover { filter: brightness(1.12); }
 
+  #viewport {
+    height: calc(100vh - 74px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 55px 14vw 45vh;
+  }
+  #content { max-width: 1000px; margin: auto; }
+
+  .section {
+    min-height: 70vh;
+    padding: 35px 0 80px;
+    border-bottom: 1px solid #28345f;
+  }
+  .section h2 {
+    color: #72a7ff;
+    font-size: 30px;
+    margin: 0 0 12px;
+  }
+  .time {
+    color: #aeb9d9;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .line {
+    font-size: 30px;
+    line-height: 1.55;
+    margin: 0 0 22px;
+  }
+  .pause {
+    color: #6f7da8;
+    font-size: 16px;
+    margin: 8px 0 20px;
+    font-style: italic;
+  }
+  .emphasis { font-weight: 800; color: #ffffff; }
+
+  #progress {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    background: #4d8dff;
+    width: 0%;
+    z-index: 10;
+  }
+
+  @media (max-width: 800px) {
+    #topbar { height: auto; padding: 12px; flex-wrap: wrap; gap: 10px; }
+    #viewport { height: calc(100vh - 104px); padding: 35px 7vw 40vh; }
+    .line { font-size: 23px; }
+    .section h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <div>
+    <div id="title">Teleprompter — TOC</div>
+    <div id="status">Pronto para começar</div>
+  </div>
+  <div class="controls">
+    <button onclick="start()">▶ START</button>
+    <button class="secondary" onclick="pause()">⏸ PAUSAR</button>
+    <button class="secondary" onclick="nextSection()">PRÓXIMO</button>
+    <button class="secondary" onclick="resetAll()">↺ REINICIAR</button>
+    <button class="secondary" onclick="fontSize(1)">A+</button>
+    <button class="secondary" onclick="fontSize(-1)">A−</button>
+    <button class="secondary" onclick="fullscreen()">⛶</button>
+  </div>
+</div>
+
+<div id="viewport">
+<div id="content">
+
+<section class="section">
+<h2>🎤 INTEGRANTE 1 — INTRODUÇÃO</h2>
+<div class="time">Tempo aproximado: 1 minuto</div>
+
+<p class="line">O nosso tema é o <span class="emphasis">Transtorno Obsessivo-Compulsivo</span>, ou simplesmente TOC.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Esse transtorno acontece quando a pessoa tem <span class="emphasis">pensamentos repetitivos e indesejados</span>, chamados de obsessões, e sente a necessidade de realizar <span class="emphasis">ações repetitivas</span>, chamadas de compulsões, para aliviar a ansiedade.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Um exemplo é quando alguém tem o pensamento constante de que suas mãos estão sujas e, por isso, sente a necessidade de <span class="emphasis">lavar as mãos várias vezes ao dia</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">O TOC é um tema importante para a Psicologia porque pode afetar a <span class="emphasis">rotina, os relacionamentos e a qualidade de vida</span> da pessoa.</p>
+
+<p class="line">Além disso, milhões de pessoas no mundo sofrem com esse transtorno, que muitas vezes pode começar ainda na <span class="emphasis">adolescência</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Neste vídeo, vamos mostrar como o <span class="emphasis">TOC está relacionado ao funcionamento do cérebro</span> e como isso se conecta com os seus <span class="emphasis">sintomas psicológicos</span>.</p>
+</section>
+
+<section class="section">
+<h2>🧠 INTEGRANTE 2 — ESTRUTURAS E CIRCUITOS</h2>
+<div class="time">Tempo aproximado: 1 minuto</div>
+
+<p class="line">O TOC está relacionado a algumas <span class="emphasis">regiões específicas do cérebro</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Uma delas é o <span class="emphasis">córtex frontal</span>, que participa da tomada de decisões e do controle dos pensamentos.</p>
+
+<p class="line">Outra região é o <span class="emphasis">cíngulo anterior</span>, que está relacionado ao controle das emoções.</p>
+
+<p class="line">E também temos o <span class="emphasis">núcleo caudado</span>, que participa do controle e da filtragem de pensamentos e comportamentos.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Essas regiões fazem parte de um circuito chamado <span class="emphasis">cortico-estriado-talâmico-cortical</span>.</p>
+
+<p class="line">Esse circuito funciona, de forma simplificada, como uma espécie de <span class="emphasis">“freio”</span>, ajudando o cérebro a interromper pensamentos repetitivos.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">No TOC, esse circuito pode apresentar <span class="emphasis">hiperatividade</span>, como se fosse um carro com o motor acelerado e sem freio.</p>
+
+<p class="line">Isso pode contribuir para que determinados pensamentos fiquem <span class="emphasis">presos e sejam difíceis de interromper</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Além disso, neurotransmissores como <span class="emphasis">serotonina, dopamina e glutamato</span> também estão envolvidos nesse processo.</p>
+
+<p class="line">Alterações nesses sistemas podem contribuir para o aparecimento e a intensidade dos sintomas do TOC.</p>
+</section>
+
+<section class="section">
+<h2>🔄 INTEGRANTE 3 — ALTERAÇÕES E SINTOMAS</h2>
+<div class="time">Tempo aproximado: 1 minuto</div>
+
+<p class="line">Por causa dessas alterações, a pessoa pode sentir que precisa realizar determinados <span class="emphasis">rituais ou comportamentos repetitivos</span> para aliviar a ansiedade.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Um exemplo comum é <span class="emphasis">verificar várias vezes se uma porta está trancada</span>, mesmo sabendo que já conferiu.</p>
+
+<p class="line">Outro exemplo é <span class="emphasis">organizar objetos de uma maneira rígida</span>, porque a pessoa sente que algo ruim pode acontecer caso não faça isso.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Esses comportamentos podem trazer um <span class="emphasis">alívio temporário</span>.</p>
+
+<p class="line">Mas, depois de algum tempo, a ansiedade volta e o ciclo começa novamente.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">É como se o cérebro ficasse preso em um <span class="emphasis">“loop”</span>:</p>
+<div class="pause">[o pensamento aparece...]</div>
+<div class="pause">[a ansiedade aumenta...]</div>
+<div class="pause">[a pessoa realiza o ritual...]</div>
+<div class="pause">[vem o alívio...]</div>
+<div class="pause">[e depois o pensamento retorna]</div>
+
+<p class="line">Esse ciclo pode ocupar várias horas do dia e acabar prejudicando os <span class="emphasis">estudos, o trabalho e a convivência social</span>.</p>
+</section>
+
+<section class="section">
+<h2>🧠 INTEGRANTE 4 — RELAÇÃO COM A PSICOLOGIA</h2>
+<div class="time">Tempo aproximado: 1 minuto</div>
+
+<p class="line">Essas alterações no cérebro também podem se refletir diretamente nos <span class="emphasis">processos psicológicos</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">No TOC, podemos observar impactos na <span class="emphasis">emoção</span>, como ansiedade e culpa;</p>
+
+<p class="line">no <span class="emphasis">comportamento</span>, por meio dos rituais compulsivos;</p>
+
+<p class="line">e na <span class="emphasis">cognição</span>, com pensamentos intrusivos que a pessoa tem dificuldade de controlar.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">A Psicologia pode contribuir para o tratamento por meio de intervenções como a <span class="emphasis">Terapia Cognitivo-Comportamental</span>.</p>
+
+<p class="line">Ela ajuda o paciente a desenvolver estratégias para <span class="emphasis">lidar com os pensamentos e reduzir as compulsões</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Por exemplo, o paciente pode aprender, de forma gradual e com acompanhamento profissional, a <span class="emphasis">enfrentar a ansiedade sem realizar o ritual</span>, percebendo que a ansiedade pode diminuir mesmo sem realizar a compulsão.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Isso mostra que compreender o funcionamento do cérebro é importante, mas o <span class="emphasis">trabalho psicológico também é essencial</span> para ajudar a pessoa a recuperar sua autonomia e melhorar sua qualidade de vida.</p>
+</section>
+
+<section class="section">
+<h2>🎬 CONCLUSÃO — UMA ÚNICA PESSOA</h2>
+<div class="time">Tempo aproximado: 40 segundos</div>
+
+<p class="line">Para finalizar, podemos entender que o <span class="emphasis">TOC é um transtorno que envolve tanto aspectos do funcionamento do cérebro quanto aspectos psicológicos</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">As alterações em determinados circuitos cerebrais e nos neurotransmissores podem estar relacionadas aos pensamentos obsessivos e às compulsões que fazem parte do transtorno.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Ao mesmo tempo, é importante entender que cada pessoa vivencia o TOC de uma maneira diferente, e que seus impactos podem afetar diretamente a <span class="emphasis">rotina, os relacionamentos e a qualidade de vida</span>.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line">Por isso, compreender a relação entre <span class="emphasis">Neurociência e Psicologia</span> é fundamental para entender melhor o transtorno e pensar em formas de tratamento que ajudem a pessoa a lidar com os sintomas e recuperar sua autonomia.</p>
+<div class="pause">[pausa]</div>
+
+<p class="line"><span class="emphasis">Dessa forma, o estudo do TOC mostra como o funcionamento do cérebro e os processos psicológicos estão diretamente relacionados.</span></p>
+</section>
+
+</div>
+</div>
+
+<div id="progress"></div>
+
+<script>
+let running = false;
+let speed = 1.0;
+let timer = null;
+let font = 30;
+const viewport = document.getElementById('viewport');
+const sections = [...document.querySelectorAll('.section')];
+let currentSection = 0;
+
+function updateStatus(msg) {
+  document.getElementById('status').textContent = msg;
+}
+
+function start() {
+  if (running) return;
+  running = true;
+  updateStatus('▶ Reproduzindo');
+  timer = setInterval(() => {
+    viewport.scrollTop += speed;
+    updateProgress();
+    if (viewport.scrollTop + viewport.clientHeight >= viewport.scrollHeight - 5) {
+      pause();
+      updateStatus('Finalizado');
+    }
+  }, 40);
+}
+
+function pause() {
+  running = false;
+  clearInterval(timer);
+  timer = null;
+  updateStatus('⏸ Pausado');
+}
+
+function nextSection() {
+  pause();
+  currentSection = Math.min(currentSection + 1, sections.length - 1);
+  sections[currentSection].scrollIntoView({behavior:'smooth', block:'start'});
+  updateStatus('Seção ' + (currentSection + 1) + ' de ' + sections.length);
+}
+
+function resetAll() {
+  pause();
+  viewport.scrollTo({top: 0, behavior: 'smooth'});
+  currentSection = 0;
+  updateStatus('Pronto para começar');
+}
+
+function fontSize(delta) {
+  font = Math.max(20, Math.min(46, font + delta * 2));
+  document.querySelectorAll('.line').forEach(x => x.style.fontSize = font + 'px');
+}
+
+function fullscreen() {
+  if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+  else document.exitFullscreen();
+}
+
+function updateProgress() {
+  const max = viewport.scrollHeight - viewport.clientHeight;
+  const pct = max > 0 ? (viewport.scrollTop / max) * 100 : 0;
+  document.getElementById('progress').style.width = pct + '%';
+
+  let idx = sections.findIndex(s => s.offsetTop - 120 > viewport.scrollTop);
+  currentSection = idx === -1 ? sections.length - 1 : Math.max(0, idx - 1);
+}
+
+viewport.addEventListener('scroll', updateProgress);
+
+document.addEventListener('keydown', e => {
+  if (e.code === 'Space') {
+    e.preventDefault();
+    running ? pause() : start();
+  }
+  if (e.key === 'ArrowRight') nextSection();
+  if (e.key === 'ArrowLeft') {
+    pause();
+    currentSection = Math.max(0, currentSection - 1);
+    sections[currentSection].scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  if (e.key.toLowerCase() === 'f') fullscreen();
+});
+</script>
+
+</body>
+</html>
